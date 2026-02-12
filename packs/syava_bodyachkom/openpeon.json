@@ -1,0 +1,56 @@
+{
+  "cesp_version": "1.0",
+  "name": "syava_bodyachkom",
+  "display_name": "Sява - Бодрячком",
+  "version": "1.0.0",
+  "author": {
+    "name": "accessd",
+    "github": "accessd"
+  },
+  "license": "CC-BY-NC-4.0",
+  "language": "ru",
+  "categories": {
+    "session.start": {
+      "sounds": [
+        { "file": "sounds/01_bodyachkom_patsanchiki.wav", "label": "Бодрячком, пацанчики, бодрячком!", "sha256": "274eecadaee0a5eea735269bb3e53ecc54bceb93b7afd097a9626fe705fb58a2" },
+        { "file": "sounds/06_derzhimsya.wav", "label": "Опа! Бодрячком! Держимся бодрячком!", "sha256": "588a0748aa6151fcfc2070cfae501245356f73fcecd15ef05ee1c3016783891d" }
+      ]
+    },
+    "task.acknowledge": {
+      "sounds": [
+        { "file": "sounds/02_opa.wav", "label": "Опа!", "sha256": "ad59a25bf05cf0c802e3b91a91910fd7ae040b1548bb1d5734567cd13fb72b82" },
+        { "file": "sounds/05_kachaet.wav", "label": "Качает музяка", "sha256": "16090ffd1ccee9f04c0dc5cb682bdf965f81887cf3f9fdaa8cce76cd643306f4" },
+        { "file": "sounds/10_kachaet_outro.wav", "label": "Опа! Качает музяка всяко", "sha256": "407f90574b2d06c726e294b742fc3023f9e06cdbda03ef55b52aa28c4da2138c" }
+      ]
+    },
+    "task.complete": {
+      "sounds": [
+        { "file": "sounds/09_derzhimsya_outro.wav", "label": "Держимся бодрячком", "sha256": "41aa9ca662694644cd942828e0b78baa1787831a5c32e3abeb2f8663b1559007" },
+        { "file": "sounds/10_kachaet_outro.wav", "label": "Опа! Качает музяка всяко", "sha256": "407f90574b2d06c726e294b742fc3023f9e06cdbda03ef55b52aa28c4da2138c" },
+        { "file": "sounds/02_opa.wav", "label": "Опа!", "sha256": "ad59a25bf05cf0c802e3b91a91910fd7ae040b1548bb1d5734567cd13fb72b82" }
+      ]
+    },
+    "task.error": {
+      "sounds": [
+        { "file": "sounds/08_opa_nihuya.wav", "label": "Опа, нихуя!", "sha256": "d51dc975e75dd8734478c790241ca1fcf60931fe90a7a5bc37362b6d54e26fae" }
+      ]
+    },
+    "input.required": {
+      "sounds": [
+        { "file": "sounds/07_cheche.wav", "label": "Чё, чё?", "sha256": "cb950870fbbd85020713031419b1578a22b05a47c79be153b3544956d75c6657" },
+        { "file": "sounds/02_opa.wav", "label": "Опа!", "sha256": "ad59a25bf05cf0c802e3b91a91910fd7ae040b1548bb1d5734567cd13fb72b82" }
+      ]
+    },
+    "resource.limit": {
+      "sounds": [
+        { "file": "sounds/08_opa_nihuya.wav", "label": "Опа, нихуя!", "sha256": "d51dc975e75dd8734478c790241ca1fcf60931fe90a7a5bc37362b6d54e26fae" }
+      ]
+    },
+    "user.spam": {
+      "sounds": [
+        { "file": "sounds/11_da_ladno.wav", "label": "Да ладно!", "sha256": "153154a59d41e6edfe4beb46d81b60be1f1340395a9f429e0e9a3dc2c9725f03" },
+        { "file": "sounds/08_opa_nihuya.wav", "label": "Опа, нихуя!", "sha256": "d51dc975e75dd8734478c790241ca1fcf60931fe90a7a5bc37362b6d54e26fae" }
+      ]
+    }
+  }
+}

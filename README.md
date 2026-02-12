@@ -357,6 +357,7 @@ Mobile notifications fire on every event regardless of window focus — they're 
 | `duke_nukem` | Duke Nukem | "Hail to the king!", "Groovy.", "Balls of steel." |
 | `tf2_engineer` | Engineer (Team Fortress 2) | "Sentry going up.", "Nice work!", "Cowboy up!" |
 | `hd2_helldiver` | Helldiver (Helldivers 2) | "For democracy!", "How 'bout a nice cup of Liber-tea?" |
+| `syava_bodyachkom` | Sява (Russian rap) | "Бодрячком, пацанчики!", "Опа!", "Да ладно!" |
 
 **[Browse all packs with audio previews &rarr; openpeon.com/packs](https://openpeon.com/packs)**
 
