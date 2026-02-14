@@ -19,61 +19,8 @@ for arg in "$@"; do
       cat <<'HELPEOF'
 Usage: install.sh [OPTIONS]
 
-Options:
-  --global             Install globally (default)
-  --local              Install in current project (.claude)
-  --init-local-config  Create local config only, then exit
-  --all                Install all packs
-  --packs=<a,b,c>      Install specific packs
-HELPEOF
-      exit 0
-      ;;
-  esac
-done
-
-GLOBAL_BASE="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
-LOCAL_BASE="$PWD/.claude"
-if [ "$LOCAL_MODE" = true ]; then
-  BASE_DIR="$LOCAL_BASE"
-else
-  BASE_DIR="$GLOBAL_BASE"
-fi
-INSTALL_DIR="$BASE_DIR/hooks/peon-ping"
-SETTINGS="$BASE_DIR/settings.json"
-REPO_BASE="https://raw.githubusercontent.com/PeonPing/peon-ping/main"
-REGISTRY_URL="https://peonping.github.io/registry/index.json"
-
-if [ "$INIT_LOCAL_CONFIG" = true ]; then
-  LOCAL_CONFIG_DIR="$LOCAL_BASE/hooks/peon-ping"
-  LOCAL_CONFIG_FILE="$LOCAL_CONFIG_DIR/config.json"
-  mkdir -p "$LOCAL_CONFIG_DIR"
-  if [ -f "$LOCAL_CONFIG_FILE" ]; then
-    echo "Local config already exists: $LOCAL_CONFIG_FILE"
-    exit 0
-  fi
-  if [ -f "$GLOBAL_BASE/hooks/peon-ping/config.json" ]; then
-    cp "$GLOBAL_BASE/hooks/peon-ping/config.json" "$LOCAL_CONFIG_FILE"
-  elif [ -n "${BASH_SOURCE[0]:-}" ] && [ "${BASH_SOURCE[0]}" != "bash" ]; then
-    CANDIDATE="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd)"
-    if [ -f "$CANDIDATE/config.json" ]; then
-      cp "$CANDIDATE/config.json" "$LOCAL_CONFIG_FILE"
-    else
-      curl -fsSL "$REPO_BASE/config.json" -o "$LOCAL_CONFIG_FILE"
-    fi
-  else
-    curl -fsSL "$REPO_BASE/config.json" -o "$LOCAL_CONFIG_FILE"
-  fi
-  echo "Created local config: $LOCAL_CONFIG_FILE"
-  exit 0
-fi
-
-# Default packs (curated English set installed by default)
-DEFAULT_PACKS="peon peasant glados sc_kerrigan sc_battlecruiser ra2_kirov dota2_axe duke_nukem tf2_engineer hd2_helldiver"
-
-# Fallback pack list (used if registry is unreachable)
-FALLBACK_PACKS="acolyte_de acolyte_ru aoe2 aom_greek brewmaster_ru dota2_axe duke_nukem glados hd2_helldiver molag_bal murloc ocarina_of_time peon peon_cz peon_de peon_es peon_fr peon_pl peon_ru peasant peasant_cz peasant_es peasant_fr peasant_ru ra2_kirov ra2_soviet_engineer ra_soviet rick sc_battlecruiser sc_firebat sc_kerrigan sc_medic sc_scv sc_tank sc_terran sc_vessel sheogorath sopranos tf2_engineer wc2_peasant"
-FALLBACK_REPO="PeonPing/og-packs"
-FALLBACK_REF="v1.1.0"
+# All available sound packs (add new packs here)
+PACKS="peon peon_fr peon_pl peasant peasant_fr ra2_soviet_engineer sc_battlecruiser sc_kerrigan syava_bodyachkom"
 
 # --- Platform detection ---
 detect_platform() {
